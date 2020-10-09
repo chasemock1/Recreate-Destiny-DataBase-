@@ -31,6 +31,8 @@ App (Src)
   
   |__ Icons.jsx
   
+  |__ Form.jsx
+  
   |__ Stats.jsx
   
   |__ Activities.jsx
