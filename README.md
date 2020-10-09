@@ -47,23 +47,23 @@ App (Src)
   
 ## API and Data Sample
 
-```{
-    "records": [
+```
+base('Table 1').create([
+  {
+    "fields": {
+      "Category": "Armor",
+      "Class": "hunter",
+      "Rarity": "Legendary",
+      "Name": "Test",
+      "Slot": "Helment",
+      "Season": "Season of Arrival",
+      "Icon": [
         {
-            "id": "recMrkbCueYdCk8Ez",
-            "fields": {
-                "Name": "Test",
-                "Season": "Season of Arrival",
-                "Class": "hunter",
-                "Icon": [
-                    {
-                        "id": "attlU4XfDKOBqyrk6",
-                        "url": "https://dl.airtable.com/.attachments/9937712ec76ca365df19106f12fbe3e5/631309a7/ZVMMznb.jpg",
-                        "filename": "ZVMMznb.jpg",
-                        "size": 5378,
-                        "type": "image/jpeg",
-                        "thumbnails": {
-                            "small": {
+          "url": "https://dl.airtable.com/.attachments/9937712ec76ca365df19106f12fbe3e5/631309a7/ZVMMznb.jpg"
+        }
+      ]
+    }
+  },
  ```
                             
 ### MVP/PostMVP
