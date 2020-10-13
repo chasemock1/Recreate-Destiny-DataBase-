@@ -3,7 +3,7 @@ import Data from './Data'
 import Header from './Header'
 import Home from './Home'
 import axios from 'axios'
-import { Route, Link} from 'react-router-dom'
+import { Route} from 'react-router-dom'
 import './App.css';
 import Form from './Form';
 import GearPage from './GearPage';
@@ -50,11 +50,11 @@ function App() {
 
         
       <Route exact path = '/list-view'>
-        {/* {gear.map((ger)=>(
+        {gear.map((ger)=>(
            <Data data={ger} fetchGear={fetchGear} setFetchGear={setFetchGear}/>
-           <Link to = {`/gear/${props.data.fields.name}`}><img src={props.data.fields.icon} alt="" /></Link>
+          //  <Link to = {`/gear/${props.data.fields.name}`}><img src={props.data.fields.icon} alt="" /></Link>
 
-        ))} */}
+        ))}
       </Route>
 
       <Route exact path = '/form'>
