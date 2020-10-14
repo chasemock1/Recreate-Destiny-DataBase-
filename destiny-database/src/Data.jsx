@@ -3,13 +3,17 @@ import {Link} from 'react-router-dom'
 
 
 function Data(props){
-//     const data = [props.data.fields]
-// console.log(data)
-//     let  dataResults =  data.filter(function(gear){
-//         return gear.class === "Hunter"
-//     })
+    const data = [props.data.fields.charClass]
+//  console.log(data)
 
-// console.log(dataResults)
+    let  dataResults =  data.filter(function(gear){
+        if(data.includes( "Hunter")){
+            return data 
+        }
+        
+    })
+
+console.log(dataResults)
     return(
         
         

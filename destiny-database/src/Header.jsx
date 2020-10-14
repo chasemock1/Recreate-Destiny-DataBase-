@@ -7,6 +7,7 @@ return(
     <Link to='/'>Home</Link> 
     <Link to='/list-view' >List</Link>
     <Link to='/form' >Form</Link>
+    <Link to='/hunter' >Hunter</Link>
 
     <h2>SearchBar(placeHolder)</h2>
 

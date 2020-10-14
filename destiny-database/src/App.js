@@ -12,6 +12,8 @@ function App() {
   const [gear, setGear] = useState([])
   const [fetchGear, setFetchGear] = useState(false)
 
+
+
   useEffect(()=>{
     const getData = async ()=>{
       const airtableURl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/destiny`
@@ -32,12 +34,13 @@ function App() {
   },[fetchGear])
 
 //   console.log(fetchGear)
-  // const fillData = this.data.fields
-//   let filteredData = fillData.filter(function(gear){
-//     return gear.class === "Hunter"
+  
+//   let filteredData = gear.filter(ger => {
+//     return ger.class.includes('Hunter')
 // })
+// console.log(filteredData)
 // console.log(fillData)
-
+// console.log(gear)
   return (
     <div className="App">
       <h1>Destiny Database</h1>
@@ -51,19 +54,25 @@ function App() {
         
       <Route exact path = '/list-view'>
         {gear.map((ger)=>(
-           <Data data={ger} fetchGear={fetchGear} setFetchGear={setFetchGear}/>
-          //  <Link to = {`/gear/${props.data.fields.name}`}><img src={props.data.fields.icon} alt="" /></Link>
+          <Data data={ger} fetchGear={fetchGear} setFetchGear={setFetchGear}/>
 
         ))}
       </Route>
 
       <Route exact path = '/form'>
-          <Form/>
-        </Route>
+        <Form/>
+      </Route>
 
-          <Route exact path = '/gear/name'>
-            <GearPage data = {gear}/>
-          </Route>
+      <Route exact path = '/gear/:name'>
+          <GearPage data = {gear}/>
+      </Route>
+
+      <Route exact path ='/hunter'>
+        {gear.map((ger)=>(
+          <Data data={ger} fetchGear={fetchGear} setFetchGear={setFetchGear}/>
+
+        ))}
+      </Route>
 
     </div>
   );
