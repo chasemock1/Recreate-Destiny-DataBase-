@@ -3,17 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 function Data(props){
-    const data = [props.data.fields.charClass]
-//  console.log(data)
 
-    let  dataResults =  data.filter(function(gear){
-        if(data.includes( "Hunter")){
-            return data 
-        }
-        
-    })
-
-console.log(dataResults)
     return(
         
         
@@ -24,7 +14,7 @@ console.log(dataResults)
             <h4>Name: {props.data.fields.name}</h4>
             {/* <h4>Slot: {props.data.fields.slot}</h4> */}
             {/* <h4>Season: {props.data.fields.season}</h4> */}
-            <Link to = {`/gear/${props.data.fields.name}`}><img src={props.data.fields.icon} alt="" /></Link>
+            <Link to = {`/gear/${props.data.fields.name}`}><img src={props.data.fields.icon} alt={props.data.fields.name} /></Link>
             {/* <img src={props.data.fields.image[0].thumbnails} alt="" /> */}
         </div>
 

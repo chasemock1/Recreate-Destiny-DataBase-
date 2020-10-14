@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import Data from './Data'
-import Header from './Header'
+import Header from './Header/Header'
 import Home from './Home'
 import axios from 'axios'
 import { Route} from 'react-router-dom'
 import './App.css';
-import Form from './Form';
+import Form from './Form/Form';
 import GearPage from './GearPage';
+import GearIndex from './GearIndex'
 
 function App() {
   const [gear, setGear] = useState([])
@@ -31,7 +32,7 @@ function App() {
     }
     getData()
 
-  },[fetchGear])
+  },[])
 
 //   console.log(fetchGear)
   
@@ -46,17 +47,15 @@ function App() {
       <h1>Destiny Database</h1>
 
       <Header/>
-
+    
         <Route exact path = '/'>
           <Home/>
         </Route>
 
         
       <Route exact path = '/list-view'>
-        {gear.map((ger)=>(
-          <Data data={ger} fetchGear={fetchGear} setFetchGear={setFetchGear}/>
-
-        ))}
+        <GearIndex gear={gear}/>
+        
       </Route>
 
       <Route exact path = '/form'>
@@ -67,12 +66,8 @@ function App() {
           <GearPage data = {gear}/>
       </Route>
 
-      <Route exact path ='/hunter'>
-        {gear.map((ger)=>(
-          <Data data={ger} fetchGear={fetchGear} setFetchGear={setFetchGear}/>
-
-        ))}
-      </Route>
+      
+      
 
     </div>
   );

@@ -4,19 +4,19 @@ import {useParams} from 'react-router-dom'
 function GearPage(props){
     const params = useParams()
 
-    // const gear = props.data.fields.find((ger) => ger.name === params.name)
-    // console.log(props.data.fields)
-    // console.log(gear)
+    const charGear = props.data.find((ger) => ger.name === params.name)
+    console.log(props.data)
+    console.log(charGear)
     return(
         <div>
             
-            {/* <h3>Category: {props.data.fields.name}</h3>          
-            <h4>Class: {props.data.fields.charClass}</h4>
-            <h4>Rarity: {props.data.fields.rarity}</h4>
-            <h4>Name: {props.data.fields.name}</h4>
-            <h4>Slot: {props.data.fields.slot}</h4>
-            <h4>Season: {props.data.fields.season}</h4>
-            <img src={props.data.fields.icon} alt="" /> */}
+            {/* <h3>Category: {props.gear.fields.name}</h3>          
+            <h4>Class: {props.gear.fields.charClass}</h4>
+            <h4>Rarity: {props.gear.fields.rarity}</h4>
+            <h4>Name: {props.gear.fields.name}</h4>
+            <h4>Slot: {props.gear.fields.slot}</h4>
+            <h4>Season: {props.gear.fields.season}</h4>
+            <img src={props.gear.fields.icon} alt="" /> */}
             
 
         </div>

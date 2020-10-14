@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import axios from 'axios'
+import axios from 'axios' 
+import './Form.css'
 
 function Form(){
 const [category, setCategory] = useState('')
@@ -21,7 +22,6 @@ const handleSubmit = async (e)=>{
         season,
         icon
     }
-    //make a POST request to our endpoints to create new data
     const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/destiny`
 
         await axios.post(airtableURL, { fields }, {
@@ -41,7 +41,8 @@ const handleSubmit = async (e)=>{
 
     return(
         <div>
-            <h1>This is the form page</h1>
+            <h1>Did I miss something?</h1>
+            <h2>Insert the info and I will update the rest.</h2>
             <form onSubmit={handleSubmit}>
            
            <label htmlFor="category">Category</label>
