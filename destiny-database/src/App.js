@@ -11,7 +11,7 @@ import GearIndex from './GearIndex'
 function App() {
   const [gear, setGear] = useState([])
   const [gearByType, setGearByType] = useState({})
-
+  const [act, setAct] = useState([])
 
   useEffect(()=>{
     const getData = async ()=>{
@@ -45,6 +45,20 @@ function App() {
 
   },[])
 
+  useEffect(()=>{
+    const getAct = async () =>{
+      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE2}/activities`
+      const response = await axios.get(airtableURL, {
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+        }
+      })
+      setAct(response.data.records)
+      console.log(response.data.records)
+    }
+    getAct()
+  },[])
+
 
   return (
     <div className="App">
@@ -53,7 +67,11 @@ function App() {
       <Header/>
     
         <Route exact path = '/'>
-          <Home/>
+          <h1>Activities</h1>
+          {act.map((a) =>(
+            <Home data={a}/>
+
+          ))}
         </Route>
 
         

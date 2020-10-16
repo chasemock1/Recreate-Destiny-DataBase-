@@ -1,0 +1,15 @@
+.home-div{
+    margin: 0 0 10px 220px ;
+    text-align: justify;
+    border: solid 1px black;
+    
+}
+
+
+@media only screen and (max-width: 683px) {
+    .home-div{
+        text-align: center;
+        margin: auto;
+    }
+    
+    }
