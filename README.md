@@ -2,6 +2,9 @@
 
 Destiny Database
 
+## Link
+https://dreamy-keller-959a59.netlify.app
+
 ## Project Description
 
 This is a recreation of the destiny database. You will be able to search for items based on class, armor type, weapon type, weapon stats and their roles, armor stats, and mods
@@ -91,13 +94,13 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|October 8| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|October 9| Project Approval | Incomplete
-|October 11| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|October 12| Pseudocode / actual code | Incomplete
-|October 13| Initial Clickable Model  | Incomplete
-|October 14| MVP | Incomplete
-|October 16| Presentations | Incomplete
+|October 8| Prompt / Wireframes / Priority Matrix / Timeframes | complete
+|October 9| Project Approval | complete
+|October 11| Core Application Structure (HTML, CSS, etc.) | complete
+|October 12| Pseudocode / actual code | complete
+|October 13| Initial Clickable Model  | complete
+|October 14| MVP | complete
+|October 16| Presentations | complete
 
 ## Timeframes
 
@@ -107,13 +110,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Creating a Api | H | 4hrs|  |  |
-| Rendering data from the Api | H | 8hrs|  |  |
-| Create multiple componets | H | 3hrs|  |  |
-| Create Css for the main pages | H | 4hrs|  |  |
-| Polishing | H | 5hrs|  |  |
-| Post MVP | M | 6hrs|  |  |
-| Total | H | 30hrs|  |  |
+| Creating a Api | H | 4hrs| 4hrs | 4hrs |
+| Rendering data from the Api | H | 8hrs| 15hrs | 15hrs |
+| Create multiple componets | H | 3hrs| 3hrs | 3hrs |
+| Create Css for the main pages | H | 4hrs| 4hrs | 4hrs |
+| Polishing | H | 5hrs| 3hrs | 3hrs |
+| Post MVP | M | 6hrs| 12hrs | 12hrs |
+| Total | H | 30hrs| 41hrs | 41hrs |
 
 ## SWOT Analysis
 
