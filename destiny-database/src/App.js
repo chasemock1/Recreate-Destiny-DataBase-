@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Header from './Header/Header'
-import Home from './Home'
+import Home from './Home/Home'
 import axios from 'axios'
 import { Route} from 'react-router-dom'
 import './App.css';

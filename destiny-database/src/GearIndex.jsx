@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Data from "./Data";
+import Data from "./Data/Data";
 
 function GearIndex(props) {
   const [category, setCategory] = useState("all");
