@@ -1,5 +1,18 @@
 .App {
   text-align: center;
-}
+  background-image: url('https://i.imgur.com/eAh4PRp.jpg') ;
+  background-size: cover;
+  padding-bottom: 250px;
+  padding-top: 20px;
 
+}
+body{
+/* background-image: url('https://i.imgur.com/eAh4PRp.jpg') ; */
+/* background-repeat: no-repeat;
+background-size: cover; */
+background-color: rgb(18,23 ,28 );
+
+
+
+}
 

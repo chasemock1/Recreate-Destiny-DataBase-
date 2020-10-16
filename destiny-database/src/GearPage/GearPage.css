@@ -1,0 +1,20 @@
+.icon{
+    margin: 100px 20px 100px 240px;
+    float: left;
+}
+.detailed-text{
+text-align: justify;
+margin: 0 0 25px 0;
+}
+.detailed-con{
+    margin: 200px 0 0 0;
+}
+@media only screen and (max-width: 683px) {
+  .detailed-text{
+      margin: 0 0 10px 10px;
+      text-align: center;
+  }
+  .icon{
+      margin: 0 155px 0 155px;
+  }
+  }

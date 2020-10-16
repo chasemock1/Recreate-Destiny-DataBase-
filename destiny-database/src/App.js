@@ -1,18 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import Data from './Data'
 import Header from './Header/Header'
 import Home from './Home'
 import axios from 'axios'
 import { Route} from 'react-router-dom'
 import './App.css';
 import Form from './Form/Form';
-import GearPage from './GearPage';
+import GearPage from './GearPage/GearPage';
 import GearIndex from './GearIndex'
 
 function App() {
   const [gear, setGear] = useState([])
-  const [fetchGear, setFetchGear] = useState(false)
-
+  const [gearByType, setGearByType] = useState({})
 
 
   useEffect(()=>{
@@ -23,25 +21,31 @@ function App() {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       })
-      // console.log(gear)
 
+      const {records}= response.data
+      const groupBy = records.reduce(
+        (acc, curr) => {
+          acc[curr.fields.charClass].push(curr);
+          acc.all.push(curr)
+          return acc;
+        },
+        {
+          'Hunter': [],
+          'Titan': [],
+          'Warlock': [],
+          'all':[]
+        }
+      );
+        setGearByType(groupBy)
       setGear(response.data.records)
-
+      
        
-      // console.log(response.data.records)
     }
     getData()
 
   },[])
 
-//   console.log(fetchGear)
-  
-//   let filteredData = gear.filter(ger => {
-//     return ger.class.includes('Hunter')
-// })
-// console.log(filteredData)
-// console.log(fillData)
-// console.log(gear)
+
   return (
     <div className="App">
       <h1>Destiny Database</h1>
@@ -54,7 +58,7 @@ function App() {
 
         
       <Route exact path = '/list-view'>
-        <GearIndex gear={gear}/>
+        <GearIndex gearByType = {gearByType}/>
         
       </Route>
 
@@ -62,8 +66,8 @@ function App() {
         <Form/>
       </Route>
 
-      <Route exact path = '/gear/:name'>
-          <GearPage data = {gear}/>
+      <Route exact path = '/gear/:id'>
+          <GearPage gear = {gear}/>
       </Route>
 
       
